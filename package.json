@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "start": "jest --watch",
-    "test": "jest"
+    "test": "jest",
+    "new-problem": "node ./scripts/new-problem.js -t "
   },
   "keywords": [],
   "author": "Arpit Sheth <arpit@arpitsheth.com> (@shetharp)",
