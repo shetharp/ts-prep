@@ -50,8 +50,8 @@ const createStarterFiles = async () => {
         console.log(chalk.hex("#F8DFED")(`🧠 Happy solving!`))
 
     } catch (error) {
-        // throw error;
         console.error("🚨 Something went wrong!");
+        console.error(error);
     }
 };
 
