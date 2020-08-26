@@ -1,0 +1,23 @@
+{
+  "name": "ts-prep",
+  "version": "1.0.0",
+  "description": "🧠 A TypeScript starter for solving LeetCode problems with test-driven-development",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "jest --watch",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "boxen": "^4.2.0",
+    "chalk": "^4.1.0",
+    "jest": "^26.4.0",
+    "ts-jest": "^26.2.0",
+    "typescript": "^3.9.7",
+    "yargs": "^13.2.4"
+  }
+}
