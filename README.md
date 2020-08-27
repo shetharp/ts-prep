@@ -1,6 +1,6 @@
 # ts-prep
 
-_🧩 A TypeScript starter for solving LeetCode problems with test-driven-development_
+_🧩 A TypeScript starter for solving LeetCode problems with test-driven development_
 
 # Usage
 
@@ -30,12 +30,10 @@ _🧩 A TypeScript starter for solving LeetCode problems with test-driven-develo
 3. Start making changes! 
    - You will see your changes be validated against your test cases.
    - [Add a new problem](#add-a-new-problem) with the script (or manually)
+   - [Test your solution](#jest-tips-for-test-driven-development) with Jest using TDD
 
 
 ## Add a new problem
-
-You can add a new problem manually by following the repo [structure](#structure). 
-However, this repo comes with a script to quickly set up starter files for new LeetCode problems&mdash;letting you focus on the real problem solving!
 
 In the root directory of the repo, run
 ```shell
@@ -43,10 +41,10 @@ npm run new-problem '<title>'
 ```
 <details>
  <summary>
-  Where <code><title></code> is the LeetCode problem's title.
-  </summary>
+  Where <code>&lt;title&gt;</code> is the LeetCode problem's title.
+</summary>
 
-- The format of the title should be: `{number}. {name}` 
+- The format of the title should be: `{number}. {name}`
 - The title must start with a number, followed by a period. Otherwise, the script won't work!
 - The title should be wrapped in quotes for the argument to get passed into the script
 </details>
@@ -60,7 +58,9 @@ npm run new-problem '202. Happy Number'
  <summary>
   About this script
  </summary>
- 
+
+This repo comes with a script to quickly set up starter files for new LeetCode problems&mdash;letting you focus on the real problem solving!
+
 This script is defined in the `package.json`. 
 It uses your local Node runtime environment to execute the `scripts/new-problem.js` file.
 The script parses the inputted title and uses the templates to auto-generate the boilerplate `.md` and `.ts` files.
@@ -71,25 +71,65 @@ node ./scripts/new-problem.js -t '<title>'
 ```
 </details>
 
+_Alternatively, you can add a new problem manually by following the repo [structure](#structure)._
 
-## Structure
+## Jest Tips for Test-Driven Development
 
-**`src/` directory** &ndash; In general, you should do all your work here
+If you are running Jest (`npm start`), you can press the `w` key to get a list of watch usage commands.
+For example, you can press `p` to filter by a filename pattern and run tests only in those files.
+
+#### Unit Test
+Unit tests are typically denoted using the `it()` function, which is an alias for the `test()` function.
+
+#### Focus Test
+To run only specific tests and skip all others, rename the desired test(s) to **`fit()`** instead of `it()`.
+
+#### Exclude Test
+To run all tests except specific tests, rename the desire test(s) to **`xit()`** instead of `it()`.
+
+# Structure
+
+<details>
+  <summary>
+    <strong>
+      <code>src/</code>
+    </strong>
+    &ndash; In general, you should do all your work here
+  </summary>
+
 - Each LeetCode problem should have its own directory
 - Add a `.md` file in the problem directory for the problem description and discussion
 - Add a `.ts` file in the problem directory to solve and test
+</details>
 
-**`scripts/` directory** &ndash; Contains custom scripts
+<details>
+  <summary>
+    <strong>
+      <code>scripts/</code>
+    </strong>
+    &ndash; Contains custom scripts and templates
+  </summary>
+
 - The `new-problem.js` script is used to set up starter files for new LeetCode problems
 - The `templates` directory contains files that define the boilerplate content for auto-generating `.md` and `.ts` files
 - Feel free to add or modify scripts or templates to fit your needs
+</details>
 
-**`jest.config.js` file** &ndash; Defines our custom Jest configuration
+<details>
+  <summary>
+    <strong>
+      <code>jest.config.js</code>
+    </strong>
+    &ndash; Defines our custom Jest configuration
+  </summary>
+
 - We match test cases defined in regular `.ts` files
   - By default, Jest matches `.ts` files in a `__tests__` dir or if the filename ends with `.spec.ts` or `.test.ts`
   - Our custom `testMatch` rule lets write code to solve and test in one file
 - We use `ts-jest` as a dependency to transform `.ts` files for Jest
   - By default, Jest only works with JavaScript
+- Learn how to configure [Jest for TypeScript](https://basarat.gitbook.io/typescript/intro-1/jest)
+</details>
 
 # How to Contribute
 

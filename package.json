@@ -1,7 +1,7 @@
 {
   "name": "ts-prep",
   "version": "1.0.0",
-  "description": "🧩 A TypeScript starter for solving LeetCode problems with test-driven-development",
+  "description": "🧩 A TypeScript starter for solving LeetCode problems with test-driven development",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
