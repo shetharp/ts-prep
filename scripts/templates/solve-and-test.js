@@ -13,8 +13,8 @@ module.exports = (title, slugName) => {
 describe("${title}", () => {
     it("example 1", () => {
         // 🟡 Add test case here.
-        const input = 0;
-        expect(input).toBe(0);
+        const input = false;
+        expect(input).toBe(true);
     });
 }); 
 `)
