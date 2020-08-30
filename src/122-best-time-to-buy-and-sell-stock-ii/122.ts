@@ -5,7 +5,7 @@
  * Solve
  */
 // 🟡 Add the function or class skeleton from LeetCode here.
- 
+
 /**
  * Test
  */
@@ -15,4 +15,7 @@ describe("122. Best Time to Buy and Sell Stock II", () => {
         const input = 0;
         expect(input).toBe(0);
     });
-}); 
+});
+
+// Make this file a module to avoid global scoping
+export { }

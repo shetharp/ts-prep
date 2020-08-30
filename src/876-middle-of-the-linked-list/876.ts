@@ -5,7 +5,7 @@
  * Solve
  */
 // 🟡 Add the function or class skeleton from LeetCode here.
- 
+
 /**
  * Test
  */
@@ -15,4 +15,7 @@ describe("876. Middle of the Linked List", () => {
         const input = 0;
         expect(input).toBe(0);
     });
-}); 
+});
+
+// Make this file a module to avoid global scoping
+export { }

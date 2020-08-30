@@ -91,4 +91,7 @@ describe("155. Min Stack", () => {
         expect(minStack1.top()).toBe(0);
         expect(minStack1.getMin()).toBe(-2);
     })
-}); 
+});
+
+// Make this file a module to avoid global scoping
+export { }

@@ -33,4 +33,7 @@ describe("1046. Last Stone Weight", () => {
         const input = [2, 3, 1];
         expect(lastStoneWeight(input)).toBe(0);
     });
-}); 
+});
+
+// Make this file a module to avoid global scoping
+export { }
