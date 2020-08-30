@@ -16,6 +16,9 @@ describe("${title}", () => {
         const input = false;
         expect(input).toBe(true);
     });
-}); 
+});
+
+// Make this file a module to avoid global scoping
+export { }
 `)
 };
